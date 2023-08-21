@@ -85,3 +85,49 @@ const recordVideoThree = new Promise((resolve, reject) => {
 //         console.log(message);
 //     })
 
+
+
+
+//   Recap Two   //
+
+// const count = true;
+// let countValue = new Promise((resolve, reject) => {
+//     if (count) {
+//         resolve('There is a count value.');
+//     } else {
+//         reject("There is no count value");
+//     }
+// })
+// console.log(countValue);
+
+
+// let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("done"), 3000);
+// });
+// promise.then((success) => console.log(success))
+
+
+// let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("Whoops!"), 2000);
+// });
+// promise.catch((error) => console.log(error))
+
+
+// example showing catch block
+let stat = true;
+let exampleTask = new Promise((resolve, reject) => {
+    if (stat) {
+        resolve("Promise accepted");
+    }
+    reject("Promise rejected");
+});
+exampleTask
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((err) => {
+        console.error(err);
+    })
+    .finally(() => {
+        console.log("Always gonna log");
+    })
